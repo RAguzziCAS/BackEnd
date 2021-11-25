@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.Compra = exports.Vendedor = exports.Cliente = exports.Articulo = void 0;
+var articulo_model_1 = require("./articulo.model");
+Object.defineProperty(exports, "Articulo", { enumerable: true, get: function () { return articulo_model_1.Articulo; } });
+var cliente_model_1 = require("./cliente.model");
+Object.defineProperty(exports, "Cliente", { enumerable: true, get: function () { return cliente_model_1.Cliente; } });
+var vendedor_model_1 = require("./vendedor.model");
+Object.defineProperty(exports, "Vendedor", { enumerable: true, get: function () { return vendedor_model_1.Vendedor; } });
+var compra_model_1 = require("./compra.model");
+Object.defineProperty(exports, "Compra", { enumerable: true, get: function () { return compra_model_1.Compra; } });

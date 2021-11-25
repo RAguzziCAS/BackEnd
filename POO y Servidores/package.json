@@ -1,0 +1,16 @@
+{
+  "name": "clase_1",
+  "version": "1.0.0",
+  "description": "Este es el paquete de la clase #1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Crystal Advance; Robert Aguzzi",
+  "license": "ISC",
+  "dependencies": {
+    "prompt": "^1.2.0",
+    "prompt-sync": "^4.2.0"
+  }
+}
