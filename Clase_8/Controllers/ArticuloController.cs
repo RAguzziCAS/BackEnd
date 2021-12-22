@@ -15,9 +15,9 @@ namespace Clase_8.Controllers
     {
         [HttpGet]
         [Route("api/articulo/lista")]
-        public List<Articulo> Lista()
+        public Articulo Lista()
         {
-            return ListarInventario(); ;
+            return new Articulo(); ;
         }
 
         [HttpGet]

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http.Headers;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace Clase_8
 {
@@ -24,7 +25,7 @@ namespace Clase_8
             config.Formatters.JsonFormatter.SupportedMediaTypes
             .Add(new MediaTypeHeaderValue("text/html"));
 
-            config.EnableCors();
+            //config.EnableCors(new EnableCorsAttribute("*", "*", "GET, POST, PUT, DELETE, OPTIONS"));
 
         }
     }

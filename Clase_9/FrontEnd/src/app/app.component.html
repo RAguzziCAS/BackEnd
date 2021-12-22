@@ -1,0 +1,87 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
+  <div class="container-fluid">
+      <a class="navbar-brand" href="#">CRUD Personas</a>
+  </div>
+</nav>
+
+<div class="container-fluid mt-5">
+  <div class="row">
+      <div class="col-8">
+          <div class="card shadow">
+              <div class="card-header bg-success text-light">
+                  <h4 class="card-tittle">Lista de Personas</h4>
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-12">
+                          <table class="table table-hover text-center">
+                              <thead>
+                                  <tr>
+                                      <th>#</th>
+                                      <th>Cedula</th>
+                                      <th>Nombre</th>
+                                      <th>Primer Apellido</th>
+                                      <th>Segundo Apellido</th>
+                                      <th>Acciones</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor = "let item of personas; let i = index">
+                                      <td>{{i+1}}</td>
+                                      <td>{{item.cedula}}</td>
+                                      <td>{{item.nombre}}</td>
+                                      <td>{{item.primerApellido}}</td>
+                                      <td>{{item.segundoApellido}}</td>
+                                      <td>
+                                          <button class="btn btn-sm btn-primary" (click) = "Cargar(item)">E</button>
+                                          <button class="btn btn-sm btn-danger" (click) = "Delete(item)">D</button>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="col-4">
+          <div class="card shadow">
+              <div class="card-header bg-success text-light">
+                  <h4 class="card-tittle">Ingresar Persona</h4>
+              </div>
+              <div class="card-body">
+                  <div class="row">
+                      <div class="col-6">
+                          <label>Cedula</label>
+                          <input type="text" class="form-control" [(ngModel)]="nuevo.cedula" [disabled] = "edit">
+                      </div>
+
+                      <div class="col-6">
+                          <label>Nombre</label>
+                          <input type="text" class="form-control" [(ngModel)]="nuevo.nombre">
+                      </div>
+                  </div>
+                  <br>
+                  <div class="row">
+                      <div class="col-6">
+                          <label>Primer Apelldio</label>
+                          <input type="text" class="form-control" [(ngModel)]="nuevo.primerApellido">
+                      </div>
+
+                      <div class="col-6">
+                          <label>Segundo Apellido</label>
+                          <input type="text" class="form-control" [(ngModel)]="nuevo.segundoApellido">
+                      </div>
+                  </div>
+              </div>
+              <div class="card-footer">
+                  <div class="d-flex justify-content-end">
+                      <button class="btn btn-primary" (click) = "Ingresar()">
+                          Ingresar
+                      </button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
